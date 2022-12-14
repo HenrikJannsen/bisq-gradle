@@ -66,7 +66,7 @@ def editStartScriptAppHomeVar = tasks.register('editStartScriptAppHomeVar') {
 
 def postBuild = tasks.register('postBuild') {
     description = "Makes distribution's start script runnable from project root directory."
-    dependsOn 'copyStartScripts', 'copyDistributionLib', 'editStartScriptAppHomeVar'
+    dependsOn 'copyStartScripts', /*'copyDistributionLib',*/ 'editStartScriptAppHomeVar'
 }
 
 def buildTask = tasks.findByName('build')
